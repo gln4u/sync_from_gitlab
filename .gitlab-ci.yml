@@ -29,8 +29,8 @@ build-job:       # This job runs in the build stage, which runs first.
 mirror:
   stage: build
   script:
-    #- git config credential.helper "/bin/sh -c 'echo username=$user && echo password=$pwd'"
-    - git config --global user.name "gln4u"
+    - git config credential.helper "/bin/sh -c 'echo username=$user && echo password=$pwd'"
+    - git config --global user.name $user
     - git config --global user.email laxminarayana0526@gmail.com
     - git checkout $CI_COMMIT_REF_NAME
     - git merge $CI_COMMIT_SHA
