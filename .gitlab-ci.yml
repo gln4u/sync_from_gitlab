@@ -33,7 +33,7 @@ mirror:
     - git checkout $CI_COMMIT_REF_NAME
     - git merge $CI_COMMIT_SHA
     - git remote
-    - git push $GIT_UPSTREAM $CI_COMMIT_REF_NAME --force
+    - git push origin $CI_COMMIT_REF_NAME --force
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
